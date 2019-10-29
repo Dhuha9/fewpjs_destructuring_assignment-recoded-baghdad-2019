@@ -34,10 +34,10 @@ const[moo,neigh,baa,oink,cluck]=farmAnimals.split(" ");
 // 2. Bolt the horse wandered off, so just give us four animals, and let's name them Bessie, Dolly, Babe, and Little.
 
 
-const [Bessie, Dolly, Babe,Little]=farmAnimals.replace("horse ", "").split(" ");
+const [Bessie, ,Dolly, Babe,Little]=farmAnimals.split(" ");
 
 // 3. Little the chicken had to go back to the coop, so now we're left with three. Let's use color variables of black_and_white, black, and pink.
-const [black_and_white, black, pink]=farmAnimals.replace(" chicken", "").split(" ");
+const [black_and_white,, black,, pink]=farmAnimals.split(" ");
 
 // Arrays
 
@@ -46,7 +46,7 @@ const [black_and_white, black, pink]=farmAnimals.replace(" chicken", "").split("
 const [red, orange, yellow, green, blue, indigo, violet]=color;
 
 // 5. Some people have a really hard time picking out indigo, so let's leave that one out, using the first letter of each color as the variable names.
-const [r, o, y ,g, b, v]=color.filter(color=>color!=="indigo");
+const [r, o, y ,g, b,, v]=color;
 
 // 6. But wait! Indigo is now feeling *super* left out. Let's only assign indigo using indg. 
 const indg=indigo;
@@ -56,5 +56,5 @@ const indg=indigo;
 
 const {name,color,song,job,partner}=muppet;
 // 8. Use destructuring to assign songs 2 and 4, and Kermit's job and partner
-const{song_2,song_4}=muppet.the_muppet_movie;
-const{k_job,k_partner}=muppet;
+const {k_job,k_partner}=muppet;
+const {song_2,song_4}=muppet.k_album.the_muppet_movie;
